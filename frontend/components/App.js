@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div id={id}>
-        <h2 className='big'>Hello, world!</h2>
+        <h2 className='big'>Hello world!</h2>
       </div>
 
       <div id='container2'>

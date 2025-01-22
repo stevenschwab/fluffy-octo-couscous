@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function App() {
   const num = 7
   const id = 'container'
   const ints = [1,2,3]
   const isHappy = true
+  const [isOn, setIsOn] = useState(false)
+  const [count, setCount] = useState(0)
+  const toggle = evt => setIsOn(!isOn) // eslint-disable-line
+  const inc = evt => setCount(count + 1) // eslint-disable-line
+
   return (
     <>
       <div id={id}>
@@ -22,6 +27,9 @@ function App() {
       {
         isHappy ? "I am pretty happy" : "having a bad day"
       }
+      <div>Lightbulb and Counter</div>
+      <div onClick={toggle}>The bulb is {isOn ? "ON" : "OFF"}</div>
+      <div onClick={inc}>The count {count}</div>
     </>
   )
 }
